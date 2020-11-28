@@ -55,7 +55,7 @@ CREATE TABLE opoioid_deaths(
 `Crude Rate` VARCHAR(50) NOT NULL,
  `Crude Rate Lower 95% Confidence Interval` VARCHAR(50) NOT NULL,
  `Crude Rate Upper 95% Confidence Interval` VARCHAR(50) NOT NULL,
- `Prescriptions Dispensed by US Retailers in that year (millions)` INTEGER NOT NULL
+ `Prescriptions Dispensed by US Retailers in that year (millions)` INTEGER NOT NULL,
 PRIMARY KEY(`State`, `YEAR`)); 
 
 
