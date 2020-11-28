@@ -8,7 +8,7 @@ USE murder;
 CREATE TABLE IF NOT EXISTS murders(
 `Record ID` INTEGER NOT NULL, 
 `Agency Code` VARCHAR(20) NOT NULL,
-`Agency Name` VARCHAR(50) NOT NULL,
+`Agency Name` VARCHAR(100) NOT NULL,
 `Agency TYPE` VARCHAR(50) NOT NULL,
 `City` VARCHAR(50) NOT NULL,
 `State` VARCHAR(50) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS murders(
 `Victim Race` VARCHAR(50) NOT NULL,
 `Victim Ethnicity` VARCHAR(50) NOT NULL,
 `Perpetrator Sex` VARCHAR(50) NOT NULL,
-`Perpetrator Age` INTEGER NOT NULL,
+`Perpetrator Age` VARCHAR(20) NOT NULL,
 `Perpetrator Race` VARCHAR(50) NOT NULL,
 `Perpetrator Ethnicity` VARCHAR(50) NOT NULL,
 `Relationship` VARCHAR(50) NOT NULL,
@@ -36,8 +36,9 @@ PRIMARY KEY (`Record ID`));
 -- load table
 LOAD DATA INFILE 'D:/Projects/BA-20-21/dengineering-2/group-project/data/raw/murders.csv'
 INTO TABLE murders
-FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n' 
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
 IGNORE 1 LINES 
 (`Record ID`, `Agency Code`, `Agency Name`, `Agency TYPE`, `City`, `State`, `YEAR`, `MONTH`, `Incident`, 
 `Crime TYPE`, `Crime Solved`, `Victim Sex`, `Victim Age`, `Victim Race`, `Victim Ethnicity`, `Perpetrator Sex`, 
