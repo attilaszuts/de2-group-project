@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+<entry key="node_file" type="xstring" value="settings.xml"/>
+<config key="flow_stack"/>
+<config key="internal_node_subsettings">
+<entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+</config>
+<config key="model">
+<config key="groupByColumns_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_filterString"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<config key="groupByColumns">
+<config key="InclList">
+<entry key="array-size" type="xint" value="2"/>
+<entry key="0" type="xstring" value="State"/>
+<entry key="1" type="xstring" value="YEAR"/>
+</config>
+<config key="ExclList">
+<entry key="array-size" type="xint" value="3"/>
+<entry key="0" type="xstring" value="Record ID"/>
+<entry key="1" type="xstring" value="Crime TYPE"/>
+<entry key="2" type="xstring" value="Victim Count"/>
+</config>
+<entry key="keep_all_columns_selected" type="xboolean" value="false"/>
+</config>
+<config key="manualAggregationFunctions">
+<config key="f_0">
+<entry key="columnName" type="xstring" value="Victim Count"/>
+<config key="columnType">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<entry key="is_null" type="xboolean" value="false"/>
+</config>
+<entry key="aggregationFunction" type="xstring" value="SUM_DISTINCT"/>
+<config key="functionSettings">
+<config key="booleanOption_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="booleanOption" type="xboolean" value="false"/>
+</config>
+</config>
+</config>
+<config key="patternAggregationFunctions"/>
+<config key="typeAggregationFunctions"/>
+<config key="columnNamePolicy_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="columnNamePolicy" type="xstring" value="Aggregation method (column name)"/>
+<config key="addCountStar_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="addCountStar" type="xboolean" value="false"/>
+<config key="countStarColName_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+<entry key="EnabledStatus" type="xboolean" value="false"/>
+</config>
+<entry key="countStarColName" type="xstring" value="COUNT(*)"/>
+<entry key="typeMatch" type="xbyte" value="0"/>
+</config>
+<entry key="customDescription" type="xstring" isnull="true" value=""/>
+<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="factory" type="xstring" value="org.knime.database.node.manipulation.groupby.DBGroupByNodeFactory"/>
+<entry key="node-name" type="xstring" value="DB GroupBy"/>
+<entry key="node-bundle-name" type="xstring" value="KNIME database nodes"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.database.nodes"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-bundle-version" type="xstring" value="4.2.0.v202006230916"/>
+<entry key="node-feature-name" type="xstring" value="KNIME Database"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.database.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-feature-version" type="xstring" value="4.2.1.v202008251536"/>
+<config key="factory_settings"/>
+<entry key="name" type="xstring" value="DB GroupBy"/>
+<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="isInactive" type="xboolean" value="false"/>
+<config key="ports">
+<config key="port_1">
+<entry key="index" type="xint" value="1"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.database.port.DBDataPortObjectSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.database.port.DBDataPortObject"/>
+<entry key="port_object_summary" type="xstring" value="MySQL 48839236-e1c2-4060-999a-83cb9dbf6234"/>
+<entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+<entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+<entry key="port_dir_location" type="xstring" value="port_1"/>
+</config>
+</config>
+<config key="filestores">
+<entry key="file_store_location" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" value="f4684a2f-661e-4117-a72d-32a29a2c4d45"/>
+</config>
+</config>
