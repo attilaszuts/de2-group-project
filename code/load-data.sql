@@ -34,7 +34,7 @@ PRIMARY KEY (`Record ID`));
 
 
 -- load table
-LOAD DATA INFILE 'D:/Projects/BA-20-21/dengineering-2/group-project/data/raw/murders.csv'
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/murders.csv'
 INTO TABLE murders
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -47,7 +47,7 @@ IGNORE 1 LINES
 
 
 
-CREATE TABLE deaths(
+CREATE TABLE opoioid_deaths(
 `State` VARCHAR(50) NOT NULL,
 `YEAR` YEAR NOT NULL,
 `Deaths` VARCHAR(50) NOT NULL,
@@ -55,12 +55,13 @@ CREATE TABLE deaths(
 `Crude Rate` VARCHAR(50) NOT NULL,
  `Crude Rate Lower 95% Confidence Interval` VARCHAR(50) NOT NULL,
  `Crude Rate Upper 95% Confidence Interval` VARCHAR(50) NOT NULL,
- `Prescriptions Dispensed by US Retailers in that year (millions)` INTEGER NOT NULL); 
+ `Prescriptions Dispensed by US Retailers in that year (millions)` INTEGER NOT NULL
+PRIMARY KEY(`State`, `YEAR`)); 
 
 
 -- load table
-LOAD DATA INFILE 'c:/Program Files/MySQL/Uploads/opioiddeaths.csv'
-INTO TABLE deaths
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/opioideaths.csv'
+INTO TABLE opoioid_deaths
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
