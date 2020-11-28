@@ -32,7 +32,6 @@ CREATE TABLE IF NOT EXISTS murders(
 `Record Source` VARCHAR(50) NOT NULL,
 PRIMARY KEY (`Record ID`));
 
-
 -- load table
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/murders.csv'
 INTO TABLE murders
@@ -67,4 +66,3 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 
- 
