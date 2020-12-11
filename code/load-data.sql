@@ -46,7 +46,7 @@ IGNORE 1 LINES
 
 
 
-CREATE TABLE opoioid_deaths(
+CREATE TABLE opioid_deaths(
 `State` VARCHAR(50) NOT NULL,
 `YEAR` YEAR NOT NULL,
 `Deaths` VARCHAR(50) NOT NULL,
@@ -60,7 +60,7 @@ PRIMARY KEY(`State`, `YEAR`));
 
 -- load table
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/opioideaths.csv'
-INTO TABLE opoioid_deaths
+INTO TABLE opioid_deaths
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
